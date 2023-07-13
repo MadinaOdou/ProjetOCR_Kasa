@@ -1,0 +1,15 @@
+.header {
+  @include flex-row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 60px 50px;
+  &__nav {
+    @include font-medium;
+    display: flex;
+    gap: 57px;
+    color: $color-primary;
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}

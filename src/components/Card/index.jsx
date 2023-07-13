@@ -1,8 +1,16 @@
-function Card({ title, picture }) {
+import { Link } from 'react-router-dom'
+
+function Card({ logement }) {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', padding: 15 }}>
-      <img src={picture} alt="" height={80} width={80} />
-      <span>{title}</span>
+    <div className="card">
+      <Link to={'/logement/' + logement.id}>
+        <img
+          src={logement.cover}
+          alt={logement.title}
+          className="card__image"
+        />
+        <span className="card__title">{logement.title}</span>
+      </Link>
     </div>
   )
 }

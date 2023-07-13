@@ -1,25 +1,31 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home/'
-import About from './pages/About/'
-import Logement from './pages/Logement/'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter as Router } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Error from './components/Error'
+import AppRouter from './components/AppRouter'
+import { createGlobalStyle } from 'styled-components'
+import './style.css'
 
-ReactDOM.render(
+const GlobalStyle = createGlobalStyle`
+* {
+  font-family: Montserrat, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #FF6060;
+}
+`
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
   <React.StrictMode>
     <Router>
+      <GlobalStyle />
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about/:pageNumber" element={<About />} />
-        <Route path="/logement" element={<Logement />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+      <AppRouter />
       <Footer />
     </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 )

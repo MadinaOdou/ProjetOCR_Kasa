@@ -1,0 +1,14 @@
+.footer {
+  @include flex-column;
+  background-color: $bg-color-footer;
+  align-items: center;
+  padding: 55px 0 10px;
+  gap: 15px;
+  &__logo {
+    width: 122px;
+  }
+  &__text {
+    color: $color-secondary;
+    @include font-medium;
+  }
+}
