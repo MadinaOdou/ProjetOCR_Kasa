@@ -1,19 +1,22 @@
 .banner {
   position: relative;
+  &::before {
+    @include psy-before;
+    @include home-banner-size;
+    opacity: 0.30000001192092896;
+    background: #000;
+    mix-blend-mode: darken;
+  }
   &__image {
-    border-radius: 25px;
-    width: 1240px;
-    height: 223px;
+    @include home-banner-size;
     object-fit: cover;
-    object-position: 0px -300px;
-    border-radius: 25px;
   }
   &__text {
     @include font-medium;
     color: $color-secondary;
     font-size: 48px;
     position: absolute;
-    top: 50px;
-    right: 320px;
+    top: 80px;
+    right: 330px;
   }
 }

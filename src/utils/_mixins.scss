@@ -14,3 +14,20 @@
     weight: 500;
   }
 }
+
+@mixin card-size {
+  width: 340px;
+  height: 330px;
+  border-radius: 10px;
+}
+
+@mixin home-banner-size {
+  width: 1240px;
+  height: 223px;
+  border-radius: 25px;
+}
+
+@mixin psy-before {
+  content: '';
+  position: absolute;
+}

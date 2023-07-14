@@ -1,14 +1,8 @@
-import image from '../../assets/images/cover-home.png'
-
-function Banner() {
+function Banner({ imageSrc, imageAlt, text }) {
   return (
     <div className="banner">
-      <img
-        src={image}
-        alt="Roches au bord de la mer"
-        className="banner__image"
-      />
-      <h1 className="banner__text">Chez vous, partout et ailleurs</h1>
+      <img src={imageSrc} alt={imageAlt} className="banner__image" />
+      <h1 className="banner__text">{text}</h1>
     </div>
   )
 }

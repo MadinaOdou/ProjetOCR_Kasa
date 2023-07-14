@@ -1,11 +1,14 @@
-import { useParams } from 'react-router-dom'
+import Banner from '../../components/Banner'
+import image from '../../assets/images/cover-about.png'
 
 function About() {
-  const { pageNumber } = useParams()
   return (
-    <div>
-      <div>Page à propos</div>
-      <div>Page {pageNumber}</div>
+    <div className="main-container">
+      <Banner
+        imageSrc={image}
+        imageAlt={'Une rivière coulant entre des montagnes enneigées'}
+        text={''}
+      />
     </div>
   )
 }

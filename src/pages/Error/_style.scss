@@ -1,0 +1,21 @@
+.error {
+  @include flex-column;
+  align-items: center;
+  padding: 80px 0 139px;
+  &__number {
+    color: $color-primary;
+    font-size: 288px;
+    font-weight: 700;
+  }
+  &__text {
+    color: $color-primary;
+    @include font-medium;
+    font-size: 36px;
+    padding: 100px 0 139px;
+  }
+  &__link {
+    @include font-medium;
+    font-size: 18px;
+    text-decoration: underline;
+  }
+}
