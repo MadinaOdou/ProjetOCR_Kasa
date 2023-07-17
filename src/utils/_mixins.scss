@@ -15,13 +15,20 @@
   }
 }
 
+@mixin font-regular {
+  font: {
+    size: 18px;
+    weight: 400;
+  }
+}
+
 @mixin card-size {
   width: 340px;
   height: 330px;
   border-radius: 10px;
 }
 
-@mixin home-banner-size {
+@mixin banner-size {
   width: 1240px;
   height: 223px;
   border-radius: 25px;

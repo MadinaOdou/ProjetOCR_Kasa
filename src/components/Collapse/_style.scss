@@ -1,0 +1,44 @@
+@keyframes rotateDown {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+.rotateDown {
+  animation: rotateDown 0.3s ease-in-out;
+}
+
+.collapse {
+  @include flex-column;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 38px 0;
+  width: 80%;
+  &-item {
+    &__title {
+      border-radius: 5px;
+      padding: 8px 15px;
+      @include flex-row;
+      justify-content: space-between;
+      align-items: center;
+      @include font-medium;
+      font-size: 18px;
+      color: white;
+      background: $color-primary;
+      &--icon {
+        font-size: 25px;
+      }
+    }
+    &__text {
+      background: $bg-color-primary;
+      @include font-regular;
+      color: $color-primary;
+      border-radius: 5px;
+      padding: 20px;
+      line-height: 142%;
+    }
+  }
+}

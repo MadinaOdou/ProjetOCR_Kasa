@@ -2,13 +2,13 @@
   position: relative;
   &::before {
     @include psy-before;
-    @include home-banner-size;
+    @include banner-size;
     opacity: 0.30000001192092896;
     background: #000;
     mix-blend-mode: darken;
   }
   &__image {
-    @include home-banner-size;
+    @include banner-size;
     object-fit: cover;
   }
   &__text {
