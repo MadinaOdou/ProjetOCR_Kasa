@@ -19,16 +19,21 @@ function Collapse() {
         <div key={item.id} className="collapse-item">
           <div className="collapse-item__title">
             <h2>{item.title}</h2>
-            <FontAwesomeIcon
-              icon={faChevronUp}
-              className={`"collapse-item__title--icon" ${
-                selected === i ? 'rotateDown' : ''
+            <div
+              className={`collapse-item__title--icon ${
+                selected === i ? 'rotateDown' : 'rotateUp'
               }`}
               onClick={() => toggle(i)}
-            />
+            >
+              <FontAwesomeIcon icon={faChevronUp} />
+            </div>
           </div>
           {selected === i && (
-            <div className="collapse-item__text">
+            <div
+              className={`collapse-item__text ${
+                selected === i ? 'openMode' : 'closeMode'
+              }`}
+            >
               <p>{item.description}</p>
             </div>
           )}

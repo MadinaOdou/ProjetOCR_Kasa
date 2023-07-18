@@ -7,8 +7,53 @@
   }
 }
 
+@keyframes rotateUp {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes openMode {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes closeMode {
+  0% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+
 .rotateDown {
-  animation: rotateDown 0.3s ease-in-out;
+  animation: rotateDown $anim-dur ease-in-out both;
+}
+
+.rotateUp {
+  animation: rotateUp $anim-dur ease-in-out both;
+}
+
+.openMode {
+  transform-origin: top;
+  animation: openMode $anim-dur ease-in-out both;
+}
+
+.closeMode {
+  transform-origin: bottom;
+  animation: closeMode $anim-dur ease-in-out both;
 }
 
 .collapse {
@@ -30,6 +75,7 @@
       background: $color-primary;
       &--icon {
         font-size: 25px;
+        cursor: pointer;
       }
     }
     &__text {
