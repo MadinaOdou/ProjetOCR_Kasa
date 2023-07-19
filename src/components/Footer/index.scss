@@ -1,3 +1,6 @@
+@import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
+
 .footer {
   @include flex-column;
   background-color: $bg-color-footer;

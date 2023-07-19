@@ -2,6 +2,7 @@ import Banner from '../../components/Banner'
 import LogementsCards from '../../data/logements.json'
 import Card from '../../components/Card'
 import image from '../../assets/images/cover-home.png'
+import './index.scss'
 
 function Home() {
   return (

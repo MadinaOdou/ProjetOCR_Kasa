@@ -1,3 +1,5 @@
+import './index.scss'
+
 function Banner({ imageSrc, imageAlt, text }) {
   return (
     <div className="banner">

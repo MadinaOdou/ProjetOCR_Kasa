@@ -1,0 +1,11 @@
+@import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
+
+.diapo {
+  &-image {
+    height: 415px;
+  }
+  &-arrows {
+    font-size: 40px;
+  }
+}

@@ -1,0 +1,9 @@
+@import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
+
+.main-container {
+  margin: 0 auto;
+  width: 1240px;
+  padding: 50px 0;
+  position: relative;
+}

@@ -1,0 +1,9 @@
+@import '../../utils/mixins.scss';
+
+.collapse-container {
+  @include flex-column;
+  gap: 30px;
+  margin: 0 auto;
+  width: 80%;
+  padding: 38px 0;
+}

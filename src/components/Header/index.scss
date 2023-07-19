@@ -1,3 +1,6 @@
+@import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
+
 .header {
   @include flex-row;
   justify-content: space-between;

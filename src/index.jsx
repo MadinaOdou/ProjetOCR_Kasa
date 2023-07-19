@@ -5,7 +5,6 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import AppRouter from './components/AppRouter'
 import { createGlobalStyle } from 'styled-components'
-import './style.css'
 
 const GlobalStyle = createGlobalStyle`
 * {

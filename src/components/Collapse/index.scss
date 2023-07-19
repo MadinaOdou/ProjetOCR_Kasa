@@ -1,0 +1,65 @@
+@import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
+
+@keyframes rotateDown {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes rotateUp {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.rotateDown {
+  animation: rotateDown $anim-dur ease-in-out both;
+}
+
+.rotateUp {
+  animation: rotateUp $anim-dur ease-in-out both;
+}
+
+.collapse {
+  &-title {
+    border-radius: 5px;
+    padding: 10px 15px;
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+    @include font-medium;
+    color: white;
+    background: $color-primary;
+    &--icon {
+      font-size: 25px;
+      cursor: pointer;
+    }
+  }
+  &-text {
+    background: $bg-color-primary;
+    @include font-regular;
+    color: $color-primary;
+    border-radius: 5px;
+    line-height: 142%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all $anim-dur;
+
+    p {
+      padding: 10px;
+    }
+
+    &.open {
+      max-height: 999px;
+      opacity: 1;
+    }
+  }
+}
