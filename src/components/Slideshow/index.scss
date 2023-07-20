@@ -2,10 +2,32 @@
 @import '../../utils/mixins.scss';
 
 .diapo {
+  position: relative;
   &-image {
+    width: 1240px;
     height: 415px;
+    object-fit: cover;
+    border-radius: 25px;
   }
   &-arrows {
-    font-size: 40px;
+    font-size: 70px;
+    cursor: pointer;
+    color: $color-secondary;
+    &__left {
+      @include arrow-position;
+      left: 30px;
+    }
+    &__right {
+      @include arrow-position;
+      right: 30px;
+    }
+  }
+  &-numeration {
+    color: $color-secondary;
+    @include font-medium;
+    font-size: 18px;
+    position: absolute;
+    bottom: 30px;
+    left: 610px;
   }
 }

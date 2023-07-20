@@ -1,0 +1,8 @@
+.icons {
+  &-star {
+    color: gray;
+    .active {
+      color: red;
+    }
+  }
+}

@@ -38,3 +38,8 @@
   content: '';
   position: absolute;
 }
+
+@mixin arrow-position {
+  position: absolute;
+  top: 165px;
+}
