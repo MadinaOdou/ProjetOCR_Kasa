@@ -3,14 +3,25 @@
 .main-container {
   margin: 0 auto;
   width: 1240px;
+  @media (max-width: $medium) {
+    width: 335px;
+  }
   .cards {
     border-radius: 25px;
     background-color: $bg-color-primary;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     row-gap: 50px;
     padding: 48px 20px;
     margin: 50px 0;
+    @media (max-width: $medium) {
+      border-radius: 0px;
+      background-color: $color-secondary;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 22px 0 27px;
+      margin: 0;
+    }
   }
 }

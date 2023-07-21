@@ -35,11 +35,18 @@
     justify-content: space-between;
     align-items: center;
     @include font-medium;
-    color: white;
+    color: $color-secondary;
     background: $color-primary;
+    @media (max-width: $medium) {
+      font-size: 13px;
+      padding: 5px 7px;
+    }
     &--icon {
       font-size: 25px;
       cursor: pointer;
+      @media (max-width: $medium) {
+        font-size: 15px;
+      }
     }
   }
   &-text {

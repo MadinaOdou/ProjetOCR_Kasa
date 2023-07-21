@@ -18,20 +18,24 @@ function Logement() {
     <div className="main-container">
       <Slideshow pictures={logement.pictures} />
       <div className="logement">
-        <div className="logement-title">
-          <h1>{logement.title}</h1>
-          <p>{logement.location}</p>
+        <div className="logement-info">
+          <div className="logement-info-text">
+            <h1>{logement.title}</h1>
+            <p>{logement.location}</p>
+            <div className="logement-info-text__tags">
+              {logement.tags.map((tag, index) => (
+                <span key={index}>{tag}</span>
+              ))}
+            </div>
+          </div>
+          <div className="logement-info-host">
+            <div className="logement-info-host__name">
+              <h2>{logement.host.name}</h2>
+              <img src={logement.host.picture} alt="Hôte" />
+            </div>
+            <Rating value={logement.rating} />
+          </div>
         </div>
-        <div className="logement-tags">
-          {logement.tags.map((tag, index) => (
-            <span key={index}>{tag}</span>
-          ))}
-        </div>
-        <div className="logement-host">
-          <h2>{logement.host.name}</h2>
-          <img src={logement.host.picture} alt="Hôte" />
-        </div>
-        <Rating value={logement.rating} />
         <div className="logement-collapse">
           <Collapse title={'Description'} text={logement.description} />
           <Collapse

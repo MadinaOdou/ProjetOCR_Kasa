@@ -2,6 +2,61 @@
 @import '../../utils/mixins.scss';
 
 .logement {
+  &-info {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 24px 0;
+    &-text {
+      color: $color-primary;
+      h1 {
+        @include font-medium;
+        font-size: 36px;
+        padding-bottom: 6px;
+      }
+      p {
+        font-size: 18px;
+      }
+      &__tags {
+        @include flex-row;
+        gap: 10px;
+        span {
+          @include font-medium;
+          text-align: center;
+          margin-top: 20px;
+          width: 125px;
+          height: 25px;
+          padding-top: 5px;
+          background: $color-primary;
+          color: $color-secondary;
+          font-size: 14px;
+          border-radius: 10px;
+        }
+      }
+    }
+    &-host {
+      @include flex-column;
+      align-items: flex-end;
+      &__name {
+        @include flex-row;
+        align-items: center;
+        gap: 10px;
+        h2 {
+          text-align: right;
+          @include font-medium;
+          font-size: 18px;
+          color: $color-primary;
+          width: 93px;
+          overflow: auto;
+          line-height: 142.6%;
+        }
+        img {
+          width: 64px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
   &-collapse {
     @include flex-row;
     justify-content: space-between;

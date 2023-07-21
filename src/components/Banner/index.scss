@@ -9,10 +9,12 @@
     opacity: 0.30000001192092896;
     background: #000;
     mix-blend-mode: darken;
+    @include banner-responsive;
   }
   &__image {
     @include banner-size;
     object-fit: cover;
+    @include banner-responsive;
   }
   &__text {
     @include font-medium;
@@ -21,5 +23,12 @@
     position: absolute;
     top: 80px;
     right: 330px;
+    @media (max-width: $medium) {
+      width: 190px;
+      font-size: 24px;
+      top: 26px;
+      left: 14px;
+      overflow: auto;
+    }
   }
 }

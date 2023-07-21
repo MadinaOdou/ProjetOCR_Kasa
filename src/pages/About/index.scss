@@ -1,9 +1,30 @@
 @import '../../utils/mixins.scss';
+@import '../../utils/variables.scss';
 
-.collapse-container {
+.banner-about {
+  .banner {
+    &::before {
+      @media (max-width: $medium) {
+        height: 223px;
+      }
+    }
+    img {
+      @media (max-width: $medium) {
+        height: 223px;
+      }
+    }
+  }
+}
+
+.collapse-about {
   @include flex-column;
   gap: 30px;
   margin: 0 auto;
   width: 80%;
   padding: 38px 0;
+  @media (max-width: $medium) {
+    gap: 20px;
+    width: 100%;
+    padding: 19px 0;
+  }
 }

@@ -7,11 +7,20 @@
   align-items: center;
   padding: 66px 0 29px;
   gap: 35px;
+  @media (max-width: $medium) {
+    padding-bottom: 58px;
+    gap: 13px;
+  }
   &__logo {
     width: 122px;
   }
   &__text {
     color: $color-secondary;
     @include font-medium;
+    @media (max-width: $medium) {
+      width: 120px;
+      font-size: 12px;
+      text-align: center;
+    }
   }
 }

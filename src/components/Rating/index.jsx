@@ -7,11 +7,13 @@ function Rating(props) {
   const stars = [1, 2, 3, 4, 5]
 
   return (
-    <div className="icons">
+    <div className="rating">
       {stars.map((star) => (
         <span
           key={star.toString()}
-          className={`icons-star ${value >= star ? 'active' : ''}`}
+          className={`rating__star ${
+            value >= star ? 'rating__star--active' : 'rating__star--inactive'
+          }`}
         >
           <FontAwesomeIcon icon={faStar} />
         </span>

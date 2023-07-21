@@ -26,5 +26,9 @@
     position: absolute;
     bottom: 15px;
     left: 50px;
+    @media (max-width: $medium) {
+      width: 170px;
+      left: 20px;
+    }
   }
 }
