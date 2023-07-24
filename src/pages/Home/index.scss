@@ -3,6 +3,7 @@
 .main-container {
   margin: 0 auto;
   width: 1240px;
+  box-sizing: border-box;
   @media (max-width: $medium) {
     width: 335px;
   }

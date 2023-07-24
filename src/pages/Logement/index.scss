@@ -7,36 +7,62 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 24px 0;
+    @media (max-width: $medium) {
+      padding: 15px 0 13px;
+      flex-direction: column;
+    }
     &-text {
       color: $color-primary;
       h1 {
         @include font-medium;
         font-size: 36px;
         padding-bottom: 6px;
+        @media (max-width: $medium) {
+          font-size: 18px;
+        }
       }
       p {
         font-size: 18px;
+        @media (max-width: $medium) {
+          font-size: 14px;
+          padding-bottom: 10px;
+        }
       }
       &__tags {
         @include flex-row;
         gap: 10px;
+        @media (max-width: $medium) {
+          flex-wrap: wrap;
+        }
         span {
           @include font-medium;
           text-align: center;
           margin-top: 20px;
           width: 125px;
-          height: 25px;
-          padding-top: 5px;
+          height: 20px;
+          padding-top: 6px;
           background: $color-primary;
           color: $color-secondary;
           font-size: 14px;
           border-radius: 10px;
+          @media (max-width: $medium) {
+            margin-top: 0px;
+            padding-top: 4px;
+            width: 84px;
+            height: 16px;
+            font-size: 10px;
+          }
         }
       }
     }
     &-host {
       @include flex-column;
       align-items: flex-end;
+      @media (max-width: $medium) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+      }
       &__name {
         @include flex-row;
         align-items: center;
@@ -49,10 +75,16 @@
           width: 93px;
           overflow: auto;
           line-height: 142.6%;
+          @media (max-width: $medium) {
+            font-size: 12px;
+          }
         }
         img {
           width: 64px;
           border-radius: 50%;
+          @media (max-width: $medium) {
+            width: 32px;
+          }
         }
       }
     }
@@ -62,8 +94,16 @@
     justify-content: space-between;
     width: 100%;
     margin-bottom: 50px;
+    @media (max-width: $medium) {
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 27px;
+    }
     .collapse {
       width: 47%;
+      @media (max-width: $medium) {
+        width: 100%;
+      }
     }
   }
 }

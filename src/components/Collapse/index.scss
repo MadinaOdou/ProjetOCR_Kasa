@@ -59,6 +59,9 @@
     overflow: hidden;
     opacity: 0;
     transition: all $anim-dur;
+    @media (max-width: $medium) {
+      font-size: 12px;
+    }
 
     p {
       padding: 15px;

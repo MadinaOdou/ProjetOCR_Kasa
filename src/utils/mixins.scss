@@ -54,4 +54,7 @@
 @mixin arrow-position {
   position: absolute;
   top: 165px;
+  @media (max-width: $medium) {
+    top: 112px;
+  }
 }

@@ -5,8 +5,15 @@
   padding-top: 21px;
   @include flex-row;
   gap: 10px;
+  @media (max-width: $medium) {
+    gap: 5px;
+    padding-bottom: 7px;
+  }
   &__star {
     font-size: 22px;
+    @media (max-width: $medium) {
+      font-size: 14px;
+    }
     &--active {
       color: $color-primary;
     }
