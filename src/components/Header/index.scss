@@ -19,6 +19,11 @@
     display: flex;
     gap: 57px;
     color: $color-primary;
+    a {
+      @media (max-width: $medium) {
+        text-transform: uppercase;
+      }
+    }
     a:hover {
       text-decoration: underline;
     }
